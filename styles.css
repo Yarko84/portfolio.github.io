@@ -1,0 +1,532 @@
+/* ========================================
+   CERTIFICATE LINK HIGHLIGHT
+   ======================================== */
+
+
+.certificate-link {
+  color: #111;
+  font-weight: 700;
+  background: #ededed;
+  padding: 2px 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  margin-left: auto;
+  display: inline-block;
+  transition: background 0.18s, color 0.18s;
+}
+
+.certificate-link:hover,
+.certificate-link:focus {
+  color: #fff;
+  background: #222;
+  text-decoration: underline;
+}
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.education-item .certificate-link {
+  align-self: flex-end;
+  margin-top: 4px;
+}
+
+/* ========================================
+   CV-STYLE PORTFOLIO - YAROSLAV DARMOHRAI
+   ======================================== */
+
+/* Root Variables */
+:root {
+  --primary-color: #1a1a1a;
+  --secondary-color: #333333;
+  --accent-color: #444444;
+  --text-color: #212121;
+  --text-light: #555555;
+  --bg-color: #ffffff;
+  --border-color: #cccccc;
+  --white: #ffffff;
+  --border-radius: 0px;
+  --box-shadow: none;
+  --box-shadow-hover: none;
+  --transition: all 0.2s ease;
+}
+
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--text-light);
+  text-decoration: underline;
+}
+
+/* ========================================
+   LAYOUT - CONTAINER
+   ======================================== */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
+
+header {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 40px 0;
+  border-bottom: 2px solid var(--primary-color);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+header .tagline {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--text-light);
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--text-light);
+  border-bottom: 1px solid var(--text-color);
+  text-decoration: none;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+
+main {
+  padding: 30px 0;
+}
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+
+.section {
+  background: var(--white);
+  margin-bottom: 25px;
+  padding: 25px 0;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+.section h2 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--text-color);
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section h3 {
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  margin-top: 15px;
+  margin-bottom: 3px;
+  font-weight: 700;
+}
+
+.section p {
+  color: var(--text-color);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+
+#about .section h2+p {
+  font-size: 1.05rem;
+  color: var(--text-color);
+  line-height: 1.9;
+}
+
+/* ========================================
+   SKILLS SECTION
+   ======================================== */
+
+#skills ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 20px;
+}
+
+#skills li {
+  background: transparent;
+  color: var(--text-color);
+  padding: 5px 0 5px 22px;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  text-align: left;
+  position: relative;
+  transition: var(--transition);
+  box-shadow: none;
+}
+
+#skills li:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+#skills ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ========================================
+   EXPERIENCE SECTION
+   ======================================== */
+
+.job {
+  background: transparent;
+  padding: 15px 0;
+  margin-bottom: 15px;
+  border-left: none;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.job:hover {
+  background: transparent;
+  border-left-color: transparent;
+  box-shadow: none;
+}
+
+.job h3 {
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.job .company {
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.job p:last-child {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   EDUCATION SECTION
+   ======================================== */
+
+.education-item {
+  background: transparent;
+  padding: 12px 0;
+  margin-bottom: 12px;
+  border-left: none;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.education-item:hover {
+  background: transparent;
+  box-shadow: none;
+}
+
+.education-item h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.education-item .school {
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
+.education-item p {
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   CONTACTS SECTION
+   ======================================== */
+
+#contacts p {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  display: block;
+  gap: 10px;
+}
+
+#contacts a {
+  color: var(--text-color);
+  font-weight: 500;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+
+#contacts a:hover {
+  color: var(--text-light);
+  border-bottom-color: transparent;
+  text-decoration: underline;
+}
+
+/* Contact line layout and icon styling */
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.contact-line .icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  color: #000;
+  /* black icon */
+  opacity: 0.95;
+}
+
+.contact-line a {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* ========================================
+   LANGUAGES & HOBBIES LISTS
+   ======================================== */
+
+section ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 20px;
+}
+
+section ul li {
+  padding: 4px 0;
+  padding-left: 20px;
+  position: relative;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+section ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+  background: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  box-shadow: none;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  header .tagline {
+    font-size: 1rem;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  .section {
+    padding: 20px 0;
+  }
+
+  .section h2 {
+    font-size: 1.2rem;
+  }
+
+  #skills ul,
+  section ul {
+    grid-template-columns: 1fr;
+    gap: 6px 0;
+  }
+
+  .job,
+  .education-item {
+    padding: 12px 0;
+  }
+
+  #contact p {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 30px 0;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  header .tagline {
+    font-size: 0.9rem;
+  }
+
+  nav {
+    gap: 10px;
+    flex-direction: row;
+    font-size: 0.75rem;
+  }
+
+  nav a {
+    font-size: 0.75rem;
+  }
+
+  .section {
+    padding: 15px 0;
+    margin-bottom: 20px;
+  }
+
+  .section h2 {
+    font-size: 1.1rem;
+  }
+
+  #skills ul,
+  section ul {
+    grid-template-columns: 1fr;
+    gap: 4px 0;
+  }
+
+  main {
+    padding: 15px 0;
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  body {
+    background: var(--white);
+  }
+
+  .section,
+  header {
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: var(--text-color);
+  }
+
+  nav {
+    display: none;
+  }
+}
