@@ -530,3 +530,36 @@ footer p {
     display: none;
   }
 }
+
+/* Company and School Info with Timeframe */
+.company,
+.school {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.org-name {
+  flex: 1;
+}
+
+.timeframe {
+  white-space: nowrap;
+  text-align: right;
+  color: var(--text-light);
+  margin-left: auto;
+}
+
+.certificate-badge {
+  color: var(--text-light);
+  text-decoration: underline;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.certificate-badge:hover,
+.certificate-badge:focus {
+  color: var(--text-color);
+}
